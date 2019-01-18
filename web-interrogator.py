@@ -15,6 +15,6 @@ try:
     if controller == 1:
         login_scanner()
     else:
-        print("Some alert will appear here.")
+        print("Some alert will appear here.(1)")
 except:
-    print("Some alert will appear here.")
+    print("Some alert will appear here.(2)")

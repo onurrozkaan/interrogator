@@ -14,11 +14,10 @@ def login_scanner():
             print(("\tChecking website " + domain + "..."))
             conn = http.client.HTTPConnection(domain)
             conn.connect()
-            print("\t[$] Yes... Server is Online.")
         except (http.client.HTTPResponse, socket.error) as Exit:
-            input("\t [!] Oops Error occured, Server offline or invalid URL")
+            input("\t ERROR! Make sure the URL which you typed is correct.")
             exit()
-        print("Enter domain source code:")
+        print("Select one of the following languages:")
         print("1) Website based with PHP")
         print("2) Website based with ASP")
         print("3) Website based with CFM")
@@ -33,28 +32,28 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " pages you have got.")
-            print(page_count, " total page scanned")
-            input("[/] Please press Enter to Exit")
+            print(result_count, " Admin Page Found !")
+            print(page_count, " count of scanned pages")
+            input("Press Enter to Exit")
 
         if code == 2:
             print(("\t [+] Processing on " + domain))
@@ -62,27 +61,27 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning...\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " Total Page Scanned !")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
             input("Press Enter to Exit")
 
         if code == 3:
@@ -91,27 +90,27 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " Total Page Scanned !")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
             input("Press Enter to Exit")
 
         if code == 4:
@@ -120,27 +119,27 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " Total Page Scanned !")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
             input("Press Enter to Exit")
 
         if code == 5:
@@ -149,27 +148,27 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " Total Page Scanned !")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
             input("Press Enter to Exit")
 
         if code == 6:
@@ -178,29 +177,29 @@ def login_scanner():
                 admin = admin.replace("\n", "")
                 admin = "/" + admin
                 host = domain + admin
-                print(("\t [#] Checking " + host + "..."))
+                print(("\t [#] Loading for" + host))
                 connection = http.client.HTTPConnection(domain)
                 connection.request("GET", admin)
                 response = connection.getresponse()
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "Admin page found!"))
+                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
                     print("%s %s" % (
-                        "\n>>>" + host, "Possible admin page (302 - Redirect)"))
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
                 else:
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
             print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " Total Page Scanned !")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
             input("Press Enter to Exit")
     except (http.client.HTTPResponse, socket.error):
-        print("\n\t[!] Session Cancelled; Error Occured. Check Internet Settings.")
+        print("\n\t Scanning stopped, Make sure you have your connection online.")
     except (KeyboardInterrupt, SystemExit):
-        print("\n\t[!] Session Cancelled !")
+        print("\n\t Session stopped.")
