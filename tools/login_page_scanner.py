@@ -1,6 +1,7 @@
 import http.client
 import socket
 import sys
+from assets.colors import *
 from assets.dork.config import php, asp, cfm, js, cgi, brf
 
 def login_scanner():
@@ -9,7 +10,8 @@ def login_scanner():
         page_count = 0
 
         try:
-            domain = input("Enter URL to scan Login page: ")
+            message = sys.stdout.write(red+"Enter URL to scan Login page: ")
+            domain = input()
             domain = domain.replace("http://", "")
             print(("\tChecking website " + domain + "..."))
             conn = http.client.HTTPConnection(domain)
