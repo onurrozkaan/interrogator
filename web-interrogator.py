@@ -22,6 +22,6 @@ try:
     if controller == 1:
         login_scanner()
     else:
-        print("Some alert will appear here.(1)")
+        print(red + "Unknown choise. Please select one of the above options.")
 except:
-    print("Some alert will appear here.(2)")
+    print("Unidentified Error. Please verify the source files or check Internet Connection.")

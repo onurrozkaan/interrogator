@@ -4,32 +4,36 @@ import sys
 from assets.colors import *
 from assets.dork.config import *
 
-
-
 def login_scanner():
     try:
         result_count = 0
         page_count = 0
 
         try:
-            message = sys.stdout.write(red+"Enter URL to scan Login page: ")
+            message = sys.stdout.write( red + "Enter URL to scan Login page: ")
             domain = input()
             domain = domain.replace("http://", "")
-            print(("\tChecking website " + domain + "..."))
+            print("\r")
+            print(purple + ("\t Checking website " + domain + "..."))
             conn = http.client.HTTPConnection(domain)
             conn.connect()
-        except (http.client.HTTPResponse, socket.error) as Exit:
-            input("\t ERROR! Make sure the URL which you typed is correct.")
+        except (http.client.NotConnected, socket.error) as Exit:
+            print("\r")
+            sys.stdout.write(red + "\t ERROR! Make sure the URL which you typed is correctly works.")
+            input()
             exit()
-        print("Select one of the following languages:")
-        print("1) Website based with PHP")
-        print("2) Website based with ASP")
-        print("3) Website based with CFM")
-        print("4) Website based with JS")
-        print("5) Website based with CGI")
-        print("6) Website based with BRF")
-        print("7) All in one (Might take long time)")
-        print("8) Deep scan (Might take 'very long' time)")
+        print("\r")
+        print("Select one of the following technologies:")
+        print("\r")
+        print(blue + "1) Website based with PHP")
+        print(blue + "2) Website based with ASP")
+        print(blue + "3) Website based with CFM")
+        print(blue + "4) Website based with JS")
+        print(blue + "5) Website based with CGI")
+        print(blue + "6) Website based with BRF")
+        print(blue + "7) All in one (Might take long time)")
+        print(blue + "8) Deep scan (Might take 'very long' time)")
+        print("\r")
         code = eval(input("> "))
 
         if code == 1:
@@ -57,10 +61,12 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
 
         if code == 2:
             print(("\t [+] Processing on " + domain))
@@ -87,10 +93,12 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
 
         if code == 3:
             print(("\t [+] Processing on " + domain))
@@ -117,10 +125,12 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
 
         if code == 4:
             print(("\t [+] Processing on " + domain))
@@ -147,10 +157,12 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
 
         if code == 5:
             print(("\t [+] Processing on " + domain))
@@ -177,10 +189,12 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
 
         if code == 6:
             print(("\t [+] Processing on " + domain))
@@ -207,10 +221,13 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
+
         if code == 7:
             print(("\t [+] Processing on " + domain))
             for admin in all_together:
@@ -236,10 +253,13 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
+
         if code == 8:
             print(("\t [+] Processing on " + domain))
             for admin in big_wordlist:
@@ -265,11 +285,14 @@ def login_scanner():
                     print("%s %s %s" % (
                         host, " Interesting response:", response.status))
                 connection.close()
-            print("\n\n*****- Scanning is completed -***** \n")
-            print(result_count, " Admin Login Page Found !")
-            print(page_count, " count of scanned pages")
-            input("Press Enter to Exit")
-    except (http.client.HTTPResponse, socket.error):
-        print("\n\t Scanning stopped, Make sure you have your connection online.")
+            print(yellow + "\n\n*****- Scanning is completed -***** \n")
+            print(result_count, green + " Admin Page Found !")
+            print(page_count, green + " count of scanned pages")
+            print("\r")
+            sys.stdout.write(red + "Press Enter to Exit")
+            input()
+        elif code > 8:
+            print("\r")
+            print("Unknown choise. Please select one of the above options.")
     except (KeyboardInterrupt, SystemExit):
-        print("\n\t Session stopped.")
+        print(yellow + "\n\t Session goes down. See ya next time!")
