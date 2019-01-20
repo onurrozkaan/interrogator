@@ -4,6 +4,8 @@ import sys
 from assets.colors import *
 from assets.dork.config import *
 
+
+
 def login_scanner():
     try:
         result_count = 0
@@ -43,7 +45,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -72,7 +75,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning...\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -101,7 +105,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -130,7 +135,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -159,7 +165,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -188,7 +195,8 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
@@ -216,7 +224,37 @@ def login_scanner():
                 page_count = page_count + 1
                 if response.status == 200:
                     result_count = result_count + 1
-                    print("%s %s" % ("\n\n>>>" + host, "1 page detected, might be admin page."))
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
+                    input("Press enter to continue scanning.\n")
+                elif response.status == 404:
+                    page_count = page_count
+                elif response.status == 302:
+                    print("%s %s" % (
+                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                else:
+                    print("%s %s %s" % (
+                        host, " Interesting response:", response.status))
+                connection.close()
+            print("\n\n*****- Scanning is completed -***** \n")
+            print(result_count, " Admin Login Page Found !")
+            print(page_count, " count of scanned pages")
+            input("Press Enter to Exit")
+        if code == 8:
+            print(("\t [+] Processing on " + domain))
+            for admin in big_wordlist:
+                admin = admin.replace("\n", "")
+                admin = "/" + admin
+                host = domain + admin
+                print(("\t [#] Loading for > " + host))
+                connection = http.client.HTTPConnection(domain)
+                connection.request("GET", admin)
+                response = connection.getresponse()
+                page_count = page_count + 1
+                if response.status == 200:
+                    result_count = result_count + 1
+                    print("%s %s" % ("\n\n>>>" + host,
+                                     "1 page detected, might be admin page."))
                     input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
