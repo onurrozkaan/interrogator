@@ -19,7 +19,7 @@ def login_scanner():
             conn.connect()
         except (http.client.NotConnected, socket.error) as Exit:
             print("\r")
-            sys.stdout.write(red + "\t ERROR! Make sure the URL which you typed is correctly works.")
+            sys.stdout.write(red + "\t ERROR! Make sure the URL or Internet Connection correctly works.")
             input()
             exit()
         print("\r")
@@ -55,15 +55,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -83,19 +82,18 @@ def login_scanner():
                     result_count = result_count + 1
                     print("%s %s" % ("\n\n>>>" + host,
                                      "1 page detected, might be admin page."))
-                    input("Press enter to continue scanning...\n")
+                    input("Press enter to continue scanning.\n")
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -119,15 +117,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -151,15 +148,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -183,15 +179,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -215,15 +210,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -247,15 +241,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()
@@ -279,15 +272,14 @@ def login_scanner():
                 elif response.status == 404:
                     page_count = page_count
                 elif response.status == 302:
-                    print("%s %s" % (
-                        "\n>>>" + host, "There would be something interesting (302 - Redirect)"))
+                    page_count = page_count
                 else:
-                    print("%s %s %s" % (
-                        host, " Interesting response:", response.status))
+                    page_count = page_count
                 connection.close()
             print(yellow + "\n\n*****- Scanning is completed -***** \n")
             print(result_count, green + " Admin Page Found !")
-            print(page_count, green + " count of scanned pages")
+            print("\r")
+            print(green + "Count of scanned pages: ", page_count)
             print("\r")
             sys.stdout.write(red + "Press Enter to Exit")
             input()

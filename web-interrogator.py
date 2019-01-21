@@ -4,6 +4,7 @@
 from tools.login_page_scanner import login_scanner
 from tools.brand_logo import banner_printer
 from assets.colors import *
+import http.client
 
 try:
 
@@ -23,5 +24,5 @@ try:
         login_scanner()
     else:
         print(red + "Unknown choise. Please select one of the above options.")
-except:
-    print("Unidentified Error. Please verify the source files or check Internet Connection.")
+except (http.client.NotConnected):
+    print("Unidentified Error. Please verify the source files.")

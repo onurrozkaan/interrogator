@@ -86,6 +86,7 @@ php = [
     'admin/admin-login.html',
     'admin-login.html',
     'controlpanel.php',
+    'controlpanel',
     'admincontrol.php',
     'admin/adminLogin.html',
     'adminLogin.html',
