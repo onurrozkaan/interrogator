@@ -7,13 +7,12 @@ from assets.styling.brand_logo import banner_printer
 from assets.styling.colors import *
 import http.client
 import requests,json
-import os
 import socket
 import builtwith
+import sys
 
 try:
 
-    os.system('clear')
     banner_printer()
 
     print( yellow + "1: " + blue + "Administrator Login Page Scanner" )
@@ -24,13 +23,15 @@ try:
     print( yellow + "6: " + blue + " " )
     print( yellow + "7: " + blue + " " )
     print("\r")
-    controller = eval(input("What do you want to process ? "))
+    print(purple + "Which option do you want to continue with ?")
+    controller = eval(input("> "))
 
     if controller == 1:
         login_scanner()
     if controller == 2:
-        m = input("Enter Address Website = ")
-        whois(m)
+        sys.stdout.write(red + "Enter Address Website > ")
+        query_url = input()
+        whois(query_url)
     else:
         print(red + "Unknown choise. Please select one of the above options.")
 

@@ -21,7 +21,7 @@ wrong_URL = "URL DOESNT EXIST! PLEASE TRY AGAIN.".format(red=red)
 
 str_Index = "Enter a Integer Value: ".format(red=red)
 
-val_Select = "\t{} Please Use The Index Value From The List Not By Your Own: ".format(red)
+val_Select = "Please Use The Index Value From The List Not By Your Own: "
 
 def webNotEmpty(website):
     
@@ -86,12 +86,12 @@ def whois(website):
         url = "http://api.hackertarget.com/whois/?q="
         combo ="{url}{website}".format(url=url, website=webs)
         request = requests.get(combo, headers=_headers, timeout=5).text.encode('UTF-8')
-        
-        if len(request) != 5:
-            list = request.decode().strip("").split("\n")[:-8]
+        try:
+            if len(request) != 5:
+                list = request.decode().strip("").split("\n")[:-10]
 
-            for _links in list:
-                if len(_links) != 0:
-                    write(var="", color=white, data=_links)
-        else:
-            print(red + "ERROR! " + yellow + "Please try Again")
+                for _links in list:
+                    if len(_links) != 0:
+                        write(var="-->", color=yellow, data=_links)
+        except:
+            print(red + "ERROR! " + green + "Please try Again")
