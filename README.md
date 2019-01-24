@@ -1,10 +1,13 @@
 
 <h1 align="center"> web-interrogator </h1>
 
-## This application is not stable yet.
+#### This application is not stable yet.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/39852038/51525962-6acceb00-1e42-11e9-91fd-564dbead4e03.png"/>
+<img src="https://user-images.githubusercontent.com/39852038/51685296-158a0880-1fff-11e9-8576-f968f5d0d5de.png"/>
+</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/39852038/51685337-2aff3280-1fff-11e9-8ceb-9422fa9afa3a.png"/>
 </p>
 
- <h3>Working on second level which is reachs 'whois' domain informations.</h3>
+ <h7>Whois query script completed.Working on stage third.</h3>
