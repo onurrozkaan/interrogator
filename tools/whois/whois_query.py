@@ -4,6 +4,9 @@ from assets.styling.colors import *
 import requests
 import re
 
+class okayX:
+    x = " "
+
 _headers = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -18,7 +21,7 @@ wrong_URL = "URL DOESNT EXIST! PLEASE TRY AGAIN.".format(red=red)
 
 str_Index = "Enter a Integer Value: ".format(red=red)
 
-val_Select = "\t{} Please Use The Index Value From The List\n\t\t[+] Not By Your Own: ".format(red)
+val_Select = "\t{} Please Use The Index Value From The List Not By Your Own: ".format(red)
 
 def webNotEmpty(website):
     
@@ -72,7 +75,7 @@ def Request(website, _timeout=None, _encode=None):
     except requests.exceptions.ContentDecodingError:
         pass
     except requests.exceptions.ConnectionError:
-        return "\n WARNING: Check your connection or the url which you typed is correctly works."
+        return "  WARNING: Check your connection or the url which you typed is correctly works."
         pass
     except Exception as e:
         return "Error: " + str(e)
@@ -83,11 +86,12 @@ def whois(website):
         url = "http://api.hackertarget.com/whois/?q="
         combo ="{url}{website}".format(url=url, website=webs)
         request = requests.get(combo, headers=_headers, timeout=5).text.encode('UTF-8')
+        
         if len(request) != 5:
-            list = request.strip().split()
-            print(list)
+            list = request.decode().strip("").split("\n")[:-8]
+
             for _links in list:
                 if len(_links) != 0:
                     write(var="", color=white, data=_links)
         else:
-            write(var="@", color=red, data="Error Alert.')")
+            print(red + "ERROR! " + yellow + "Please try Again")
