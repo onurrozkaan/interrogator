@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*- 
-
 from assets.styling.colors import *
 import requests
 import re
@@ -15,7 +13,7 @@ _headers = {
     'Connection': 'keep-alive'
 }
 
-empty_Website = "Please Enter A Website: ".format(red=red, blue=blue)
+empty_Website = "Url, which you enter is not valid. ".format(red=red, blue=blue)
 
 wrong_URL = "URL DOESNT EXIST! PLEASE TRY AGAIN.".format(red=red)
 

@@ -1,4 +1,3 @@
 colorama
 requests
 builtwith
-urllib3
