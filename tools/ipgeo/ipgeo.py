@@ -5,7 +5,7 @@ import json
 from assets.styling.colors import *
 
 def getOutput():
-    print(purple + "Enter the Target IP " + yellow + "(blank for yours)" +purple)
+    print(purple + "Enter the Target IP:")
     sys.stdout.write(green + "> ")
     ip_input = input()
 

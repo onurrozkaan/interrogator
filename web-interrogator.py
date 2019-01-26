@@ -29,11 +29,11 @@ try:
 
     if controller == "1":
         login_scanner()
-    if controller == "2":
+    elif controller == "2":
         sys.stdout.write(red + "Enter Address Website > ")
         query_url = input()
         whois(query_url)
-    if controller == "3":
+    elif controller == "3":
         getOutput()
     else:
         print(red + "Unknown choise. Please select one of the above options.")
