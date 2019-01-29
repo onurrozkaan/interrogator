@@ -11,32 +11,26 @@ import requests,json
 import socket
 import builtwith
 import sys
+import argparse
 
-try:
+parser = argparse.ArgumentParser(description='This is a cyber security tool created by Nimda')
+parser.add_argument('-f','--function', type=str, help="Avaible functions= 'catch.boss' 'catch.location' 'catch.igathering'")
 
-    banner_printer()
+if __name__ == "__main__":
+    args = parser.parse_args()
 
-    print( yellow + "1: " + blue + "Administrator Login Page Scanner" )
-    print( yellow + "2: " + blue + "Whois database information query" )
-    print( yellow + "3: " + blue + "Geographic location information via Ip Address" )
-    print( yellow + "4: " + blue + " " )
-    print( yellow + "5: " + blue + " " )
-    print( yellow + "6: " + blue + " " )
-    print( yellow + "7: " + blue + " " )
-    print("\r")
-    print(purple + "Which option do you want to continue with ?")
-    controller = input("> ")
+banner_printer()
 
-    if controller == "1":
-        login_scanner()
-    elif controller == "2":
-        sys.stdout.write(red + "Enter Address Website > ")
-        query_url = input()
-        whois(query_url)
-    elif controller == "3":
-        getOutput()
-    else:
-        print(red + "Unknown choise. Please select one of the above options.")
+if args.function == 'catch.boss':
+    login_scanner()
 
-except (http.client.NotConnected):
-    print("Unidentified Error. Please verify the source files.")
+elif args.function == 'catch.location':
+    getOutput()
+
+elif args.function == 'catch.igathering':
+    sys.stdout.write(red + "Enter Address Website > ")
+    query_url = input()
+    whois(query_url)
+
+else:
+    print("Unidentified entry. Check <--help> command to see usable arguments.")
