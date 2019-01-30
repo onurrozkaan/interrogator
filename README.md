@@ -3,7 +3,7 @@
 </p>
 
 ## Description
-<p align="left">Interrogator is a console application which is created to reach backside informations (geo ip, shared dns, admin page section etc..).If you're working on Penetration Testing, this application might make your work easier.</p>
+<p align="left">Interrogator is a console application which is created to reach backside information (geo ip, shared dns, admin page section etc..).If you're working on Penetration Testing, this application might make your work easier.</p>
 
 <p align="left">You can help improving this tool aswell! Feel free to further develop this project within the LICENSE rules.</p>
 
@@ -41,7 +41,7 @@ $ pip3 install -r before-run.txt
 
 ## Function Descriptions
 
-Currently Interrogator has 3 functions and their content is Admin Page Scanner via Wordlist (Strongest ones), Information Gathering via Domain and Backside Connection Informations via IP Address.
+Currently Interrogator has 3 functions and their content is Admin Page Scanner via Wordlist (Strongest ones), Information Gathering via Domain and Backside Connection Information via IP Address.
 
 <h2 align="center"> Admin Page Scanner | catch.boss | </h2>
 
