@@ -3,11 +3,11 @@
 </p>
 
 ## Description
-<p align="left"> Interrogator is a console application which is created for to reach backside informations (geo ip, shared dns, admin page section etc..).If you working on Penetration Testing, this application might make your works easier. </p>
+<p align="left">Interrogator is a console application which is created to reach backside informations (geo ip, shared dns, admin page section etc..).If you're working on Penetration Testing, this application might make your work easier.</p>
 
-<p align="left">You can make this tool greater aswell ! Feel free to develop this project within the LICENSE rules.</p>
+<p align="left">You can help improving this tool aswell! Feel free to further develop this project within the LICENSE rules.</p>
 
-About any kind of feedback please mail me Contact@onurozkan.work
+For questions or any kind of feedback please mail me Contact@onurozkan.work
 
 ## Installation
 
@@ -49,7 +49,7 @@ Currently Interrogator has 3 functions and their content is Admin Page Scanner v
 <img src="https://user-images.githubusercontent.com/39852038/52002595-7f108800-24d3-11e9-9e88-6d05365951b6.png"/>
 </p>
 
-#### After the command is executed correctly, as shown in the picture above you must enter a domain address. Then you need to select one of the wordlist options that appear. It will take a sometime depends on your connection speed and your choice.
+#### After the command is executed correctly, as shown in the picture above you must enter a domain address. Then you need to select one of the wordlist options that appear. This could take some time depending on your selection and connection speed.
 
 <h2 align="center"> Information Gathering | catch.igathering | </h2>
 
