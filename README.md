@@ -66,7 +66,7 @@ Currently Interrogator has 3 functions and their content is Admin Page Scanner v
 </p>
 
 
-#### After the command is executed correctly, as shown in the picture above you must enter a IP address and you will get the results immediately
+#### After the command is executed correctly, as shown in the picture above you must enter an IP address and you will get the results immediately
 
 ## Future Patches
 
