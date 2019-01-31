@@ -3,7 +3,7 @@
 </p>
 
 ## Description
-<p align="left">Interrogator is a console application which is created to reach backside information (geo ip, shared dns, admin page section etc..).If you're working on Penetration Testing, this application might make your works easier.</p>
+<p align="left">Interrogator is a console application which is created to reach backside information (geo ip, information gathering, hash codes..).If you're working on Penetration Testing, this application might make your works easier.</p>
 
 <p align="left">You can help improving this tool aswell! Feel free to further develop this project within the LICENSE rules.</p>
 
