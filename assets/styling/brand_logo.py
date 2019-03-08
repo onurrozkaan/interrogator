@@ -16,8 +16,8 @@ contact = green + """
       ██╔══════════════════════════════════════════════██║
       ██║                                              ██║
       ██║       Website: http://onurozkan.work         ██║
-      ██║       E-Mail: Contact@onurozkan.work         ██║
-      ██║     Github: http://github.com/onurrozkaan    ██║
+      ██║      E-Mail: onurozkan.dev@outlook.com       ██║
+      ██║     Github: http://github.com/ozkanonur      ██║
       ██║                                              ██║
       ██║                                              ██║
       ╚█████████████████████████████████████████████████╔╝ 

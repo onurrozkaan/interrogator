@@ -17,13 +17,13 @@ Interrogator requires Python3 installed on your computer. Please make sure you h
 
 Run these following commands on your terminal
 ```sh
-$ git clone https://github.com/onurrozkaan/interrogator.git
+$ git clone https://github.com/ozkanonur/interrogator.git
 $ cd interrogator
 $ pip3 install -r before-run.txt
 ```
 #### Second Way:
 
-Directly download as a zip from this <a href="https://github.com/onurrozkaan/interrogator/archive/master.zip"> link <a/>
+Directly download as a zip from this <a href="https://github.com/ozkanonur/interrogator/archive/master.zip"> link <a/>
 and go into the project folder, open terminal and run following command
   
 ```sh
