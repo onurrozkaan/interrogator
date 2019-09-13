@@ -7,7 +7,7 @@
 
 <p align="left">You can help improving this tool aswell! Feel free to further develop this project within the LICENSE rules.</p>
 
-For questions or any kind of feedback please mail me Contact@onurozkan.work
+For questions or any kind of feedback please mail me onurozkan.dev@outlook.com
 
 ## Installation
 
